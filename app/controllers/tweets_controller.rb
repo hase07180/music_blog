@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   # GET /tweets
   # GET /tweets.json
@@ -70,5 +71,9 @@ class TweetsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def tweet_params
       params.require(:tweet).permit(:title_name, :text, :image)
+    end
+
+    def move_to_index
+      redirect_to action: :index unless user_signed_in?
     end
 end
