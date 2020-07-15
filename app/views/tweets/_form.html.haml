@@ -1,0 +1,20 @@
+= form_with(model: tweet, local: true) do |form|
+  - if tweet.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(tweet.errors.count, "error")
+        prohibited this tweet from being saved:
+      %ul
+        - tweet.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :title_name
+    = form.text_field :title_name
+  .field
+    = form.label :text
+    = form.text_area :text
+  .field
+    = form.label :image
+    = form.text_field :image
+  .actions
+    = form.submit
