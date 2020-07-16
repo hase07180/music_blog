@@ -1,20 +1,8 @@
-%p#notice= notice
-%h1 Tweets
-%table
-  %thead
-    %tr
-      %th Title name
-      %th Text
-      %th Image
-      %th{:colspan => "3"}
-  %tbody
-    - @tweets.each do |tweet|
-      %tr
-        %td= tweet.title_name
-        %td= tweet.text
-        %td= tweet.image
-        %td= link_to 'Show', tweet
-        %td= link_to 'Edit', edit_tweet_path(tweet)
-        %td= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Tweet', new_tweet_path
+%section#top
+  .top-item
+    %p.top-item__sub
+      新たな音と繋がる
+    %p.top-item__sub
+      <br>Music brings people together
+  .mouse-icon
+    .wheel

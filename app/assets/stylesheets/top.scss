@@ -1,0 +1,57 @@
+#top::after {
+  content            : "";
+  position           : absolute;
+  left               : 0;
+  right              : 0;
+  top                : 0;
+  bottom             : 0;
+  background-color   : #000000;
+  background-image: linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444),
+  linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444);
+  background-position: 0 0,1.5px 1.5px;
+  background-size: 3px 3px;
+  opacity            : 0.5;
+}
+
+#top {
+  position: relative;
+  height: 100vh;
+  background-image: url(top_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .top-item {
+    text-align: center;
+    padding: 60px 30px;
+    max-width: 780px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .top-item img {
+    max-width: 180px;
+    width:100%;
+  }
+
+  .top-item__main {
+    color: #fff;
+    font-family: 'Josefin Sans',sans-serif;
+    font-size     : 30px;
+    letter-spacing: 5px;
+  }
+
+  .top-item
+
+  .top-item__sub {
+    color: #fff;
+    font-size: 30px;
+    text-transform: none;
+    margin: 15px 0;
+    font-weight: 200;
+  }
+
+
+}

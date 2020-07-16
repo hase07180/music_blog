@@ -9,17 +9,19 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header.header
-      .header__bar.row
+      .header-left
         %h1.grid-6
           %a{:href => "/"} MusicBlog
+      .header-right
         - if user_signed_in?
-          .user_nav.grid-6
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
-            = link_to "投稿する", new_tweet_path, class: "post"
+          %ul.user_nav.grid-6
+            %li= link_to "Article", tweets_path, class: "post"
+            %li= link_to "ログアウト", destroy_user_session_path, method: :delete
+            %li= link_to "投稿する", new_tweet_path, class: "post"
         - else
-          .grid-6
-            = link_to "ログイン", new_user_session_path, class: "post"
-            = link_to "新規登録", new_user_registration_path, class: "post"
+          %ul.user_nav.grid-6
+            %li= link_to "ログイン", new_user_session_path, class: "post"
+            %li= link_to "新規登録", new_user_registration_path, class: "post"
     = yield
     %footer
       %p

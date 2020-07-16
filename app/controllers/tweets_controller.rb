@@ -1,13 +1,13 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:top, :index, :show]
 
   # GET /tweets
   # GET /tweets.json
   def top
     @tweets = Tweet.all
-
   end
+
   def index
     @tweets = Tweet.all
   end
