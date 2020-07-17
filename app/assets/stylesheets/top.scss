@@ -16,7 +16,7 @@
 #top {
   position: relative;
   height: 100vh;
-  background-image: url(top_bg.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2016/02/19/10/37/concert-1209323_1280.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -41,6 +41,7 @@
     font-family: 'Josefin Sans',sans-serif;
     font-size     : 30px;
     letter-spacing: 5px;
+
   }
 
   .top-item
@@ -51,6 +52,8 @@
     text-transform: none;
     margin: 15px 0;
     font-weight: 200;
+    font-family: "Comic Sans MS";
+    letter-spacing: 5px;
   }
 
 

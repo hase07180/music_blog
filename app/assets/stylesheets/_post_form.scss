@@ -1,0 +1,51 @@
+#tweet_title_name {
+  width: 50%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+#tweet_image {
+  width: 50%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+#tweet_text {
+  width: 50%;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.field-post {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  input {
+    margin: 0 auto;
+  }
+  label {
+    text-align: center;
+  }
+}
+
+.post-form {
+  margin: 0 auto;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.post-title {
+  text-align: center;
+}
+
+.actions {
+  width: 40%;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  input {
+    width: 40%;
+    height: 50px;
+  }
+}
+

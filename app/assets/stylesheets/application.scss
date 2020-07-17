@@ -1,9 +1,12 @@
 @import "reset";
+@import "bootstrap/scss/bootstrap";
 @import "header";
 @import "top";
 @import "user_nav";
-@import "bootstrap/scss/bootstrap";
+@import "post_form";
 
+.wrapper {
+}
 // ログイン画面
 
 .container-login {
