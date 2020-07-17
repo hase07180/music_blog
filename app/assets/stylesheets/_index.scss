@@ -1,0 +1,33 @@
+.article-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Cormorant Upright',serif";
+  color: #808085;
+}
+
+.greeting h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.greeting .contents {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.greeting .contents figure {
+
+    margin-right: 25px;
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+}
+
+.greeting content {
+    width: 48%;
+}

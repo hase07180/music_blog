@@ -4,8 +4,10 @@
 @import "top";
 @import "user_nav";
 @import "post_form";
+@import "index";
 
 .wrapper {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 // ログイン画面
 

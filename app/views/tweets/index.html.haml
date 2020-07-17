@@ -1,20 +1,21 @@
 %p#notice= notice
-%h1 Tweets
-%table
-  %thead
-    %tr
-      %th Title name
-      %th Text
-      %th Image
-      %th{:colspan => "3"}
-  %tbody
-    - @tweets.each do |tweet|
-      %tr
-        %td= tweet.title_name
-        %td= tweet.text
-        %td= tweet.image
-        %td= link_to 'Show', tweet
-        %td= link_to 'Edit', edit_tweet_path(tweet)
-        %td= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }
+%h1.article-title COLUMN
+%section.greeting
+  .content-wrapper
+  - @tweets.each do |tweet|
+    .contents
+      %figure
+        = image_tag tweet.image, size: "546x290", alt: "顔写真1"
+      .content
+        %h2
+          = tweet.title_name
+        %p
+          = tweet.text
+
+        .edit-button
+          %td= link_to 'Show', tweet
+          %td= link_to 'Edit', edit_tweet_path(tweet)
+          %td= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 = link_to 'New Tweet', new_tweet_path
+
