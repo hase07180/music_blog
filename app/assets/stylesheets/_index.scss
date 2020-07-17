@@ -20,7 +20,6 @@
 }
 
 .greeting .contents figure {
-
     margin-right: 25px;
     img {
       width: 100%;
@@ -30,4 +29,11 @@
 
 .greeting content {
     width: 48%;
+}
+
+.content {
+  width: 48%;
+  p {
+    word-break: break-all;
+  }
 }
