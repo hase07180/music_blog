@@ -6,7 +6,7 @@
 }
 
 .greeting h2 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -22,7 +22,7 @@
 .greeting .contents figure {
     margin-right: 25px;
     img {
-      width: 100%;
+      width: 510px;
       vertical-align: bottom;
     }
 }
@@ -33,7 +33,20 @@
 
 .content {
   width: 48%;
-  p {
+  .tweet-sentence{
     word-break: break-all;
+    text-align: center;
+    overflow: hidden;
+    text-indent: 0%;
+    white-space: nowrap;
   }
 }
+  .edit-button {
+    text-align: center;
+    margin-top: 50px;
+    a {
+      padding: 10px;
+      background-color: red;
+      border-radius: 15px;
+    }
+  }

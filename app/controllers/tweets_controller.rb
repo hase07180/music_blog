@@ -10,6 +10,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    @tweets = Tweet.includes(:user)
   end
 
   # GET /tweets/1
@@ -74,7 +75,7 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:title_name, :text, :image)
+      params.require(:tweet).permit(:title_name, :text, :image).merge(user_id: current_user.id)
     end
 
     def move_to_index
