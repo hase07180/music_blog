@@ -17,15 +17,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.greeting .contents figure {
+    figure {
     margin-right: 25px;
     img {
       width: 510px;
       vertical-align: bottom;
     }
 }
+}
+
+.greeting .contents
 
 .greeting content {
     width: 48%;
@@ -39,6 +40,7 @@
     overflow: hidden;
     text-indent: 0%;
     white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
   .edit-button {

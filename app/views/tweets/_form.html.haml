@@ -1,5 +1,4 @@
 .post-form
-  %h1.post-title New Tweet
   = form_with(model: tweet, local: true) do |form|
     - if tweet.errors.any?
       #error_explanation

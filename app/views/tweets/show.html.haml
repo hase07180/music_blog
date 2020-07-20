@@ -1,13 +1,12 @@
 %p#notice= notice
-%p
-  %strong Title name:
-  = @tweet.title_name
-%p
-  %strong Text:
-  = @tweet.text
-%p
-  %strong Image:
-  = @tweet.image
-= link_to 'Edit', edit_tweet_path(@tweet)
-|
-= link_to 'Back', tweets_path
+.contents
+  %figure
+    = image_tag @tweet.image, size: "546x290", alt: "顔写真1"
+  .content-show
+    %h2
+      = @tweet.title_name
+    %p.tweet-sentence
+      = @tweet.text
+
+.back-button
+  = link_to 'Back', tweets_path

@@ -1,0 +1,18 @@
+- @tweets.each do |tweet|
+  .contents
+    %figure
+      = image_tag tweet.image, size: "546x290", alt: "顔写真1"
+    .content
+      %h2
+        = tweet.title_name
+      %p.tweet-sentence
+        = tweet.text
+
+
+      .edit-button
+        %td= link_to 'Show', tweet
+        %td= link_to 'Edit', edit_tweet_path(tweet)
+        %td= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+.back-button
+  = link_to 'New Tweet', new_tweet_path
