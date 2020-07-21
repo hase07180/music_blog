@@ -18,37 +18,32 @@
     align-items: center;
     margin-bottom: 30px;
     figure {
-    margin-right: 25px;
+      margin-right: 25px;
     img {
       width: 510px;
       vertical-align: bottom;
+      }
+    }
+    .content {
+      width: 48%;
+      .tweet-sentence{
+        word-break: break-all;
+        text-align: center;
+        overflow: hidden;
+        text-indent: 0%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
 }
-}
 
-.greeting .contents
 
-.greeting content {
-    width: 48%;
-}
-
-.content {
-  width: 48%;
-  .tweet-sentence{
-    word-break: break-all;
-    text-align: center;
-    overflow: hidden;
-    text-indent: 0%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
   .edit-button {
     text-align: center;
     margin-top: 50px;
     a {
       padding: 10px;
-      background-color: red;
+      background-color: #BBBBBB;
       border-radius: 15px;
     }
   }

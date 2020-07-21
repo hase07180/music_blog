@@ -24,6 +24,8 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    Comment.create(comment_params)
+    redirect_to "/tweets/#{comment.tweet.id}"
     @comment = Comment.new(comment_params)
 
     respond_to do |format|
