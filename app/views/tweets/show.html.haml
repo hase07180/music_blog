@@ -1,0 +1,17 @@
+%p#notice= notice
+.contents
+  %figure
+    = image_tag @tweet.image, size: "546x290", alt: "顔写真1"
+  .content-show
+    %h2
+      = @tweet.title_name
+    %p.tweet-sentence
+      = @tweet.text
+    - if user_signed_in?
+      = form_with model: @user do |form|
+        .comment-form
+          = form.text_field :text, class: "comment-input"
+          = form.submit '送信', class: "submit-btn"
+
+.back-button
+  = link_to 'Back', tweets_path

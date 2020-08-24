@@ -110,6 +110,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     diff-lcs (1.4.4)
     erubi (1.9.0)
     erubis (2.7.0)
@@ -350,6 +351,7 @@ DEPENDENCIES
   carrierwave
   compass-rails
   devise
+  devise-bootstrap-views (~> 1.0)
   factory_bot_rails
   faker (~> 2.8)
   fog-aws

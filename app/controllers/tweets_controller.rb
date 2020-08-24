@@ -1,11 +1,16 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:top, :index, :show]
 
   # GET /tweets
   # GET /tweets.json
+  def top
+    @tweets = Tweet.all
+  end
+
   def index
     @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   # GET /tweets/1
@@ -70,7 +75,7 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:title_name, :text, :image)
+      params.require(:tweet).permit(:title_name, :text, :image).merge(user_id: current_user.id)
     end
 
     def move_to_index

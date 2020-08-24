@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MusicBlog
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .wrapper
+      %header.header
+        .header-left
+          %h1.grid-6
+            %a{:href => "/"} MusicBlog
+        .header-right
+          - if user_signed_in?
+            %ul.user_nav.grid-6
+              %li= link_to current_user.name, "/users/#{current_user.id}"
+              %li= link_to "Article", tweets_path, class: "post"
+              %li= link_to "投稿する", new_tweet_path, class: "post"
+              %li= link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            %ul.user_nav.grid-6
+              %li= link_to "ログイン", new_user_session_path, class: "post"
+              %li= link_to "新規登録", new_user_registration_path, class: "post"
+      = yield
+      %footer
+        %p
+          Copyright MusicBlog 2020.

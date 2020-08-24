@@ -1,0 +1,49 @@
+.article-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Cormorant Upright',serif";
+  color: #808085;
+}
+
+.greeting h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.greeting .contents {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    figure {
+      margin-right: 25px;
+    img {
+      width: 510px;
+      vertical-align: bottom;
+      }
+    }
+    .content {
+      width: 48%;
+      .tweet-sentence{
+        word-break: break-all;
+        text-align: center;
+        overflow: hidden;
+        text-indent: 0%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+}
+
+
+  .edit-button {
+    text-align: center;
+    margin-top: 50px;
+    a {
+      padding: 10px;
+      background-color: #BBBBBB;
+      border-radius: 15px;
+    }
+  }

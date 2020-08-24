@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1.article-title COLUMN
+%section.greeting
+  .content-wrapper
+  - @tweets.each do |tweet|
+    .contents
+      %figure
+        = image_tag tweet.image, size: "546x290", alt: "顔写真1"
+      .content
+        %h2
+          = tweet.title_name
+        %p.tweet-sentence
+          = tweet.text
+
+        .edit-button
+          %td= link_to '詳細', tweet
+          - if user_signed_in? && current_user.id == tweet.user_id
+            %td= link_to '編集', edit_tweet_path(tweet)
+            %td= link_to '削除', tweet, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+.back-button
+  = link_to 'New Tweet', new_tweet_path
