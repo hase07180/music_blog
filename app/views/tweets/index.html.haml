@@ -13,9 +13,10 @@
           = tweet.text
 
         .edit-button
-          %td= link_to 'Show', tweet
-          %td= link_to 'Edit', edit_tweet_path(tweet)
-          %td= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to '詳細', tweet
+          - if user_signed_in? && current_user.id == tweet.user_id
+            %td= link_to '編集', edit_tweet_path(tweet)
+            %td= link_to '削除', tweet, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 .back-button
   = link_to 'New Tweet', new_tweet_path

@@ -9,8 +9,9 @@
       = @tweet.text
     - if user_signed_in?
       = form_with model: @user do |form|
-        = form.text_field :text
-        = form.submit
+        .comment-form
+          = form.text_field :text, class: "comment-input"
+          = form.submit '送信', class: "submit-btn"
 
 .back-button
   = link_to 'Back', tweets_path
