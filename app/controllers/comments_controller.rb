@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+    @comment = Comment.new
+    @comments =@tweet.comments.includes(:user)
   end
 
   # GET /comments/new

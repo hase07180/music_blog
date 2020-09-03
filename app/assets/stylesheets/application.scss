@@ -1,6 +1,7 @@
 @import "reset";
 @import "bootstrap/scss/bootstrap";
 @import "header";
+@import "footer";
 @import "top";
 @import "user_nav";
 @import "post_form";
@@ -28,7 +29,19 @@
   @extend .alert-danger;
 }
 
+#notice {
+  background-color: #CC99FF;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'Hannotate SC',sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
 
+.back-btn {
+  text-align: center;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
