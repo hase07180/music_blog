@@ -1,3 +1,4 @@
 %h1.post-title New Tweet
 = render 'form', tweet: @tweet
-= link_to '記事一覧', tweets_path, class: "back-btn"
+.back-button
+  = link_to '記事一覧', tweets_path, class: "back-btn"

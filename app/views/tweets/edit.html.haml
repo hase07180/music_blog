@@ -1,5 +1,6 @@
 %h1{style: 'text-align: center;'} Editing Tweet
 = render 'form', tweet: @tweet
-= link_to '詳細', @tweet, class: "back-btn"
-|
-= link_to '記事一覧', tweets_path, class: "back-btn"
+.back-button
+  = link_to '詳細', @tweet, class: "back-btn"
+  |
+  = link_to '記事一覧', tweets_path, class: "back-btn"
