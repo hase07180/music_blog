@@ -34,13 +34,14 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: '投稿しました。' }
+        # redirect_to tweets_path, notice: '投稿しました'
+        format.html { redirect_to tweets_path, notice: '投稿しました。' }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
-    end
+  end
   end
 
   # PATCH/PUT /tweets/1
