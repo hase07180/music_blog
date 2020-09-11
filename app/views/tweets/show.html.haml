@@ -8,10 +8,15 @@
     %p.tweet-sentence
       = @tweet.text
     - if user_signed_in?
-      = form_with model: @user do |form|
+      -# = form_with model: @user do |form|
+      = form_with(model: [@tweet, @comment], local: true) do |form|
         .comment-form
-          = form.text_field :text, class: "comment-input"
+          = form.text_field :text, placeholder: "コメントする", class: "comment-input"
           = form.submit '送信', class: "submit-btn"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
 
 .back-button
   = link_to '記事一覧', tweets_path, class: "back-btn"
