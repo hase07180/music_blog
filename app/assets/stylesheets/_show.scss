@@ -26,3 +26,19 @@
   text-overflow: ellipsis;
   margin: 30px 100px;
 }
+
+.Comment-area {
+  background-color: azure;
+  height: 100%;
+  width: 606px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: scroll;
+  white-space:nowrap;
+}
+
+.contents-image {
+  margin-top: 30px;
+  width: 90%;
+  height: 500px;
+}
