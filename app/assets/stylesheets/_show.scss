@@ -35,10 +35,29 @@
   margin-top: 30px;
   overflow: scroll;
   white-space:nowrap;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border-radius: 50px;
 }
 
 .contents-image {
   margin-top: 30px;
   width: 90%;
   height: 500px;
+}
+
+.post-list {
+  color: #808085;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Vollkorn', serif;
+}
+
+.mycontents {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
