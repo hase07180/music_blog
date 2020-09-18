@@ -1,17 +1,31 @@
 -# %p#notice= notice
 .contents
   %figure
-    = image_tag @tweet.image, size: "546x290", alt: "顔写真1"
+    = image_tag @tweet.image, size: "546x290", alt: "顔写真1", class: "contents-image"
   .content-show
     %h2
       = @tweet.title_name
     %p.tweet-sentence
       = @tweet.text
     - if user_signed_in?
-      = form_with model: @user do |form|
+      = form_with(model: [@tweet, @comment], local: true) do |form|
         .comment-form
-          = form.text_field :text, class: "comment-input"
+          = form.text_field :text, placeholder: "コメントする", class: "comment-input"
           = form.submit '送信', class: "submit-btn"
+      .Comment-area
+        %h4.Comment-area__lists ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p.Comment-area__lists__sentence
+              %strong
+                .Comment-area__lists__sentence__user
+                  = link_to comment.user.name, "/users/#{comment.user_id}"
+                .Comment-area__lists__sentence__comment
+                  = comment.text
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
 
 .back-button
   = link_to '記事一覧', tweets_path, class: "back-btn"

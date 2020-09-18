@@ -1,5 +1,9 @@
+%p.post-list
+  = @name
+  さんの投稿一覧
+
 - @tweets.each do |tweet|
-  .contents
+  .contents.mycontents
     %figure
       = image_tag tweet.image, size: "546x290", alt: "顔写真1"
     .content
