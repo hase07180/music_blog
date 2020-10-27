@@ -2,7 +2,7 @@
 %h1.article-title COLUMN
 %section.greeting
   .content-wrapper
-  - @tweets.each do |tweet|
+  - @search_tweets.each do |tweet|
     .contents
       %figure
         = image_tag tweet.image, size: "546x290", alt: "顔写真1"
