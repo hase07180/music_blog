@@ -39,7 +39,7 @@ class TweetsController < ApplicationController
       if @tweet.save
         # redirect_to tweets_path, notice: '投稿しました'
         format.html { redirect_to tweets_path, notice: '投稿しました。' }
-        format.json { render :show, status: :created, location: @tweet }
+        format.json { render :index, status: :created, location: @tweet }
       else
         format.html { render :new }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
