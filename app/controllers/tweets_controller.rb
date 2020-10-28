@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, except: [:top, :index, :show]
+  before_action :enssure_correct_user,only: [:edit, :update, :destroy]
 
   # GET /tweets
   # GET /tweets.json
@@ -67,6 +68,14 @@ class TweetsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tweets_url, notice: '削除しました。' }
       format.json { head :no_content }
+    end
+  end
+
+  def enssure_correct_user
+    @tweet = Tweet.find_by(id: params[:id])
+    if @tweet.user_id != @current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to(tweets_path)
     end
   end
 
